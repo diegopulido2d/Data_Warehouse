@@ -6,7 +6,7 @@
 
 <br />
 
-# Set-Up and Installation
+## Set-Up and Installation
 
 1. Download the source code or clone repository using git: https://github.com/diegopulido2d/Data_Warehouse
 2. Open a command line terminal or bash into the 'Back-End' folder.
@@ -15,7 +15,7 @@
 
 <br />
 
-# Preparing the Database 
+## Preparing the Database 
 1. Make sure you've got MySQL and Apache installed in your system.
 2. Run your local SQL environment (MAMP, XAMPP or similar).
 3. Locate your localhost port settings.
@@ -28,7 +28,7 @@
 
 <br />
 
-# Getting Started 
+## Getting Started 
 
 1. Now you need to generate the Prisma model, in order to have your web-app interact with the database you just created. To do so, open a terminal window within the 'Back-End' folder, and run the following command:
 ```
