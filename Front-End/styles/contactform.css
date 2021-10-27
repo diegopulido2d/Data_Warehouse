@@ -1,0 +1,45 @@
+.contacts-header{
+    height:140px;
+    background-color:#0462BA;
+    flex-flow: row wrap;
+    align-content: start;
+
+}
+.modal-header{
+    background-color:#0462BA;
+}
+
+.btn-close{
+    color: #fff;
+}
+.contacts-body{
+    position: relative;
+    transform: translateY(-85px);
+}
+.contacto__personales{
+    background-color: #fff;
+    border: 3px solid #0683F9;
+    border-radius: 6.5px;
+    /* height: 131px; */
+
+}
+
+.contacto__personal__img {
+    height: 30px;
+    width: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #1c5ac6;
+    color: white;
+    border: 3px solid white;
+    border-radius: 15px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.progress-bar{
+    background-color: #1CC1F5;
+}
