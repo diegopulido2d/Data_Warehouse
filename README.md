@@ -1,20 +1,18 @@
 # Data Warehouse
 **Diplomado Desarrollo Web FullStack - Proyecto Final**
 
-# Despliegue
+*Las carpetas alojadas en este repositorio contienen el proyecto desarrollado en su totalidad.*<br />
+*The folders stored into this repository contain the fully developed project*
 
-# BackEnd
-**1) Preparacion de archivos**
+<br /><br />
 
-* Clonar el repositorio desde github accediendo al link: https://github.com/120m4n/AcamicaDatawarehouse.git
+# Back-End
+**Set-Up and Installation**
 
-**2) Descomprimir los archivos y ubicar una terminal en la carpeta Backend**
-
-
-**3) Instalar dependencias**
-```
-npm install
-```
+1. Download the source code or clone repository using git: https://github.com/diegopulido2d/Data_Warehouse
+2. Open a command line terminal or bash into the 'Back-End' folder.
+3. Make sure you've got NodeJS and NPM installed in your system.
+4. Run 'npm init' in order to install the base packages.
 
 **4) Migracion de esquema de base de datos**
 * Iniciar los modulos MYSQL y Apache desde el panel de XAMPP.
@@ -41,7 +39,7 @@ npx prisma generate
 node ./src/app.js
 ```
 
-# FrontEnd
+# Front-End
 
 **1) Ubicar una terminal en la carpeta FrontEnd**
 
