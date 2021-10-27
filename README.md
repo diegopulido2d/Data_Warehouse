@@ -1,27 +1,5 @@
-# DataWareHouse
-**Proyecto Final Data Warehouse**
-
-Sistema para la administracion de contactos de clientes para una compañia.
-
-# Modo Freelance
-El desarrolador crea sus propias vistas para desplegar la informacion, manteniendo la funcionalidad en conjunto.
-
-
-## Entregables
-- Carpeta FrontEnd: 
-- Carpeta BackEnd
-- Readme.md
-
-## Requisitos
-
-### Instalar NodeJS
-  - [Descargar Nodejs](https://nodejs.org/en/download/)
-
-### Instalar XAMPP
-  - [Descargar XAMPP](https://www.apachefriends.org/es/download.html)
-
-### Instalar Postman
-  - [Descargar Postman](https://www.postman.com/product/api-client/)
+# Data Warehouse
+**Diplomado Desarrollo Web FullStack - Proyecto Final**
 
 # Despliegue
 
