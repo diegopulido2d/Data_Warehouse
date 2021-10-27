@@ -48,8 +48,6 @@ code .
 ```
 
 **3) Lanzar el index.html desde un server, puede ser live server**
-[Descargar LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
-![Alt Live Server](./Backend/Migracion/LiveServer.png?raw=true "Live Server")
 
 ## CREDENCIALES PARA PRUEBA
 ### ADMIN
