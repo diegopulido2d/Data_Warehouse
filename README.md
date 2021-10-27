@@ -38,7 +38,7 @@ npx prisma generate
 ```
 node app
 ```
-*Now you should have your API service up and running, and the terminal should be showing an output like the following:*
+4. Now you should have your API service up and running, and the terminal should be showing an output like the following:
 ```
 Server listening on PORT: 3000
 ```
