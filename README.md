@@ -2,7 +2,7 @@
 **Diplomado Desarrollo Web FullStack - Proyecto Final**
 
 *Las carpetas alojadas en este repositorio contienen el proyecto desarrollado en su totalidad.*<br />
-*The folders stored into this repository contain the fully developed project*
+*The folders stored into this repository contain the fully developed project.*
 
 <br /><br />
 
@@ -14,20 +14,15 @@
 3. Make sure you've got NodeJS and NPM installed in your system.
 4. Run 'npm init' in order to install the base packages.
 
-**4) Migracion de esquema de base de datos**
-* Iniciar los modulos MYSQL y Apache desde el panel de XAMPP.
-![Alt panel xampp](./Backend/Migracion/Panel_XAMPP.PNG?raw=true "Panel XAMPP")
-* Abrir XAMPP e iniciar los servicios de **Apache Web Server** y **MySQL Database**
-* Abir el navegador a la(http://localhost/phpmyadmin/)**.
-* En la pestaña Importar, boton "Seleccionar archivo" buscar la ruta local al archivo "Creacion_Schema.sql". 
-El archivo se encuenta en la ruta: **./Backend/Migracion/Creacion_Schema.sql**
-* Ejecutar la importacion con el boton "Continuar"
-![Alt importacion data](./Backend/Migracion/Importacion.PNG?raw=true "importacion data")
-**Opcional
-Ejecutar el archivo "Creacion_Schema.sql" en MySQL Workbench.
+**Preparing the Database**
+1. Make sure you've got MySQL and Apache installed in your system.
+2. Run your local SQL environment (MAMP, XAMPP or similar).
+3. Locate your localhost port settings.
+4. Make sure your localhost port number is the same as the number after the 'PORT' variable in the .env file.
+5. Run your localhost, and open your SQL graphic interface (phpMyAdmin, MariaDB, Heidi, or similar).
+6. Import the database .sql file, located into the 'db_sql' folder. You can also run the query through your command line to create all the tables of the project.
+7. Make sure to set all the environment variables according to your localhost settings (username, password and dtabase name). You can do this in the .env file.
 
-* Modelo Entidad-Relacion.
-![Alt modelo ER](./Backend/Migracion/ER_Diagram.PNG?raw=true "Modelo ER")
 
 **4) Generar el modelo de prisma**
 ```
