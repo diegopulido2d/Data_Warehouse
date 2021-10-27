@@ -28,26 +28,24 @@
 
 <br />
 
-**4) Generar el modelo de prisma**
+# Getting Started 
+
+1. Now you need to generate the Prisma model, in order to have your web-app interact with the database you just created. To do so, open a terminal window within the 'Back-End' folder, and run the following command:
 ```
 npx prisma generate
 ```
-
-**5) Iniciar el servidor**
+2. Within the same terminal route, run the API Rest service:
 ```
-node ./src/app.js
+node app
 ```
-
-# Front-End
-
-**1) Ubicar una terminal en la carpeta FrontEnd**
-
-**2) Inicializar Visual Studio Code**
+*Now you should have your API service up and running, and the terminal should be showing an output like the following:*
 ```
-code .
+Server listening on PORT: 3000
 ```
+3. Now locate the 'index.html' file within the 'Front-End' folder, and open it with Live Server (to do so, you must have the extension installed in your Visual Studio IDE. You can find and download it through the Extensions marketplace).
 
-**3) Lanzar el index.html desde un server, puede ser live server**
+
+
 
 ## CREDENCIALES PARA PRUEBA
 ### ADMIN
