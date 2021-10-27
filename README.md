@@ -4,17 +4,18 @@
 *Las carpetas alojadas en este repositorio contienen el proyecto desarrollado en su totalidad.*<br />
 *The folders stored into this repository contain the fully developed project.*
 
-<br /><br />
+<br />
 
-# Back-End
-**Set-Up and Installation**
+# Set-Up and Installation
 
 1. Download the source code or clone repository using git: https://github.com/diegopulido2d/Data_Warehouse
 2. Open a command line terminal or bash into the 'Back-End' folder.
 3. Make sure you've got NodeJS and NPM installed in your system.
 4. Run 'npm i' in order to install the base packages.
 
-**Preparing the Database**
+<br />
+
+# Preparing the Database 
 1. Make sure you've got MySQL and Apache installed in your system.
 2. Run your local SQL environment (MAMP, XAMPP or similar).
 3. Locate your localhost port settings.
@@ -25,6 +26,7 @@
 
 *Note: The original project was developed using MAMP as the preferred local server environment. Since MAMP uses 'root' both as database username AND password, you will find both arguments in the .env variable. Feel free to adjust these settings according to your own local server workspace, as the username, password and port settings may vary.*
 
+<br />
 
 **4) Generar el modelo de prisma**
 ```
