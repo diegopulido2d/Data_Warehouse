@@ -38,23 +38,24 @@ npx prisma generate
 ```
 node app
 ```
-4. Now you should have your API service up and running, and the terminal should be showing an output like the following:
+3. Now you should have your API service up and running, and the terminal should be showing an output like the following:
 ```
 Server listening on PORT: 3000
 ```
-3. Now locate the 'index.html' file within the 'Front-End' folder, and open it with Live Server (to do so, you must have the extension installed in your Visual Studio IDE. You can find and download it through the Extensions marketplace).
+4. Now locate the 'index.html' file within the 'Front-End' folder, and open it with Live Server (to do so, you must have the extension installed in your Visual Studio IDE. You can find and download it through the Extensions marketplace).
 
 
+<br />
 
 
-## CREDENCIALES PARA PRUEBA
-### ADMIN
+## Log-In Credentials
+### Admin
 {
     "username":"administrador",
     "password":"administrador"
 }
 
-### USER
+### User
 {
     "username":"usuario",
     "password":"usuario"
