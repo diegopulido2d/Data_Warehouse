@@ -50,14 +50,12 @@ Server listening on PORT: 3000
 
 ## Log-In Credentials
 ### Admin
-{
-    "username":"administrador",
-    "password":"administrador"
-}
+
+- username : administrador
+- password : administrador
+
 
 ### User
-{
-    "username":"usuario",
-    "password":"usuario"
-}
+- username : usuario
+- password : usuario
 
