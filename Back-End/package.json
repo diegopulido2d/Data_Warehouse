@@ -1,7 +1,7 @@
 {
-  "name": "datawarehouse",
+  "name": "data_warehouse",
   "version": "1.0.0",
-  "description": "proyecto backend delilah resto : sistema de pedidos online para un restaurante",
+  "description": "Proyecto final Acámica: Data Warehouse",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "datawarehouse"
+    "url": "Data_Warehouse"
   },
   "keywords": [
     "backend",
