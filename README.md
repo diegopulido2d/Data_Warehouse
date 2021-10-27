@@ -64,15 +64,3 @@ code .
     "password":"usuario"
 }
 
-
-## NOTAS:
-### Modo Freelance
-Se escogio modo freelance para agilizar la creacion de las interfaces
-### Libreria Prisma
-Prisma es un conjunto de herramientas para bases de datos de código abierto. Permite generar consultas anidadas mas facil que el sql tradicional.
-### Responsive
-El frontend se realizo para ajustarse solamente a su version de escritorio
-### Live server
-Los navegadores actuales bloquean el acceso cruzado a (js, css, etc) mediante CORS, para evitar esto se hace necesario inicializar el index.html desde un servidor.
-
-
