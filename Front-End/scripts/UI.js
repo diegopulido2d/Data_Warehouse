@@ -58,7 +58,6 @@ class UI {//es la clase que interactua con el navegador
   async init() {
      
     console.log('init');
-    $loginContainer.style.marginTop = '150px';
     $nav_pills.style.display = 'none';
     // $appContainer.classList.remove("d-none");
 

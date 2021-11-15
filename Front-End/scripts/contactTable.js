@@ -31,7 +31,7 @@ class ContactTable {
             field: "id",
             sortable: true,
             valign: 'middle',
-            width: 200,
+            width: 300,
             formatter: this.contactFormatter,
         }, {
             title: 'Pais<span class="d-none">;</span>/Region',
@@ -75,7 +75,7 @@ class ContactTable {
             title: 'Acciones',
             align: 'center',
             valign: 'middle',
-            width: 82,
+            width: 95,
             class: 'acciones-table',
             formatter: this.actionsFormatter,
             events: operateEvents
@@ -101,9 +101,6 @@ class ContactTable {
                 $remove.css("opacity", "0");
             }
             
-            // push or splice the selections if you want to save all data selections
-            // console.log(selections);
-            // $seleccionados.text('arepas');
         }
     );
 
@@ -245,7 +242,7 @@ class ContactTable {
         const ParamsEdit = 'function:update_Id:'+ row.id;
 
         return [
-            '<div class="ellipsis_actions">...</div><div class="overlay_actions"><a class="edit btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#contactsModal" data-_id="'+ row.id +'" data-bs-whatever="'+ ParamsEdit + '">',,
+            '<div class="overlay_actions"><a class="edit btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#contactsModal" data-_id="'+ row.id +'" data-bs-whatever="'+ ParamsEdit + '">',,
             '<i class="fa fa-edit"></i>',
             "</a>  ",
             '<a class="remove btn btn-danger btn-sm" href="javascript:void(0)" title="Remove">',
