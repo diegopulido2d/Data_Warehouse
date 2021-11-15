@@ -2,6 +2,15 @@ body{
     font-family: 'Open Sans' !important;
 }
 
+.dwLogo{
+    width: 200px;
+    margin-bottom: 30px;
+}
+
+.dwTitle{
+    font-weight: 900;
+}
+
 .navbar{
     background-color: #1D72C2;
     width: 100%;
@@ -73,28 +82,65 @@ body{
         padding-bottom: 20px;      
     }
 
+    .search{
+        width: 50%;
+
+        input{
+            margin-right: 20px;
+        }
+
+        button{
+            height: 100%;
+        }
+    }
+
+    
+
     tr{
         height: 75px;
         font-size: 13px;
         font-family: 'Open Sans';
+        font-weight: 600;
+        border: transparent;
     }
 
     td{
         padding: 10px;
-
-        .btn{
-            margin: 4px !important;
+        border: transparent;
         }
 
     }
+
+
+    .selected{
+        background-color: #E6F2FE;
+
+        td{
+            background-color: transparent !important;
+        }
+    }
+
+    tr:hover{
+        background-color: #E6F2FE;
+
+        td{
+            background-color: transparent !important;
+        }
+    }
+
+
 
     .acciones-table{
         .overlay_actions{
             display: flex;
+
+            .btn{
+                margin: 5px;
+            }
         }
     }
 
-}
+
 
 .table-company-container{
     .fixed-table-toolbar{
