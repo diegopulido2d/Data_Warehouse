@@ -109,8 +109,8 @@ class UI {//es la clase que interactua con el navegador
         sessionStorage.removeItem("user");
 
         Swal.fire(
-          'Warning!',
-          'Session Expired!',
+          'Advertencia',
+          'Sesión caducada.',
           'warning'
         )
       }
@@ -164,7 +164,7 @@ class UI {//es la clase que interactua con el navegador
     }
     if (loginUser.status === 401 || (loginUser.status === 400)) {
       functions.renderMessage(
-        "Usuario y/o contraseña inválidos!", 
+        "Usuario y/o contraseña inválidos. Intente de nuevo.", 
         "danger", 
         $loginAlertContainer
       );
@@ -366,7 +366,7 @@ class UI {//es la clase que interactua con el navegador
       this.renderContacts();
 
       Swal.fire({
-        title: 'El contacto ha sido creado con éxito',
+        title: 'El contacto ha sido creado con éxito.',
         icon: 'success',
         showConfirmButton: false,
         timer: 1500
@@ -414,7 +414,7 @@ class UI {//es la clase que interactua con el navegador
       this.renderContacts();
 
       Swal.fire({
-        title: 'El contacto ha sido modificado con éxito',
+        title: 'El contacto ha sido modificado con éxito.',
         icon: 'success',
         showConfirmButton: false,
         timer: 1500
@@ -485,7 +485,7 @@ class UI {//es la clase que interactua con el navegador
       this.renderCompaniesTable();
 
       Swal.fire({
-        title: 'La compañía ha sido creada con éxito',
+        title: 'La compañía ha sido creada con éxito.',
         icon: 'success',
         showConfirmButton: false,
         timer: 1500
@@ -526,7 +526,7 @@ class UI {//es la clase que interactua con el navegador
       this.renderCompaniesTable();
 
       Swal.fire({
-        title: 'La compañía ha sido modificada con éxito',
+        title: 'La compañía ha sido modificada con éxito.',
         icon: 'success',
         showConfirmButton: false,
         timer: 1500
@@ -649,7 +649,7 @@ class UI {//es la clase que interactua con el navegador
       this.renderUsersTable();
 
       Swal.fire({
-        title: 'El usuario ha sido creado con éxito',
+        title: 'El usuario ha sido creado con éxito.',
         icon: 'success',
         showConfirmButton: false,
         timer: 1500
@@ -688,7 +688,7 @@ class UI {//es la clase que interactua con el navegador
       this.renderUsersTable();
 
       Swal.fire({
-        title: 'El Usuario ha sido modificado con éxito',
+        title: 'El Usuario ha sido modificado con éxito.',
         icon: 'success',
         showConfirmButton: false,
         timer: 1500
@@ -775,8 +775,8 @@ class UI {//es la clase que interactua con el navegador
     if (result.success) {
      //todo make render message
       Swal.fire(
-        'Agregada!',
-        'Nueva region ha sido agredada!',
+        'Agregado',
+        'Nueva region ha sido agredada.',
         'success'
       )
       this.renderTreeviewRegions();
@@ -794,8 +794,8 @@ class UI {//es la clase que interactua con el navegador
 
     if (result.success) {
       Swal.fire(
-        'Agregado!',
-        'Nuevo pais ha sido agredado!',
+        'Agregado',
+        'Nuevo pais ha sido agredado.',
         'success'
         )
         this.renderTreeviewRegions();
@@ -812,8 +812,8 @@ class UI {//es la clase que interactua con el navegador
 
     if (result.success) {
       Swal.fire(
-        'Agregada!',
-        'Nueva ciudad ha sido agredado!',
+        'Agregado',
+        'Nueva ciudad ha sido agredada.',
         'success'
         )
         this.renderTreeviewRegions();
@@ -832,15 +832,15 @@ class UI {//es la clase que interactua con el navegador
 
     if (response.success) {
       Swal.fire(
-        'Eliminada!',
-        'La Region ha sido eliminada.',
+        'Eliminado',
+        'La Region ha sido eliminada,',
         'success'
       )
       this.renderTreeviewRegions();
         
     }else{
       Swal.fire(
-          'Error, integridad referencial!',
+          'Error',
           response.error,
           'error'
       )
@@ -850,7 +850,7 @@ class UI {//es la clase que interactua con el navegador
     const response = await countriesService.deleteData(countryId);
     if (response.success) {
       Swal.fire(
-        'Eliminado!',
+        'Eliminado',
         'El Pais ha sido eliminado.',
         'success'
       )
@@ -858,7 +858,7 @@ class UI {//es la clase que interactua con el navegador
         
     }else{
       Swal.fire(
-          'Error, integridad referencial!',
+          'Error',
           response.error,
           'error'
       )
@@ -868,7 +868,7 @@ class UI {//es la clase que interactua con el navegador
     const response = await citiesService.deleteData(cityId);
     if (response.success) {
       Swal.fire(
-        'Eliminada!',
+        'Eliminada',
         'La ciuidad ha sido eliminada.',
         'success'
       )
@@ -883,7 +883,7 @@ class UI {//es la clase que interactua con el navegador
       let data = '<p>'+ error + '</br>';
       data = data + 'Companias: ' + response.data.total_companies + '' + '\n' + 'Contactos: ' + response.data.total_contacts + '</p>';
       Swal.fire(
-          'Error, integridad referencial!',
+          'Error',
           data,
           'error'
       )
@@ -906,7 +906,7 @@ class UI {//es la clase que interactua con el navegador
         showCancelButton: true,
         inputValidator: (value) => {
           if (!value) {
-            return 'Se debe agregar un nombre válido!'
+            return 'Se debe agregar un nombre válido.'
           }
         }
       })
@@ -915,15 +915,15 @@ class UI {//es la clase que interactua con el navegador
         const response = await regionsService.putData(regionId,{name:newName} );
         if (response.success) {
           Swal.fire(
-            'Editado!',
-            'Region ha sido editado!',
+            'Editado',
+            'Region ha sido editado.',
             'success'
           )
           this.renderTreeviewRegions();
         }else{
           // console.log(response.error);
           Swal.fire(
-            'Error!',
+            'Error',
             response.error.join('\n'),
             'error'
           )
@@ -931,7 +931,7 @@ class UI {//es la clase que interactua con el navegador
       }
     }else{
       Swal.fire(
-        'Error!',
+        'Error',
         regionData.message.message,
         'error'
       )
@@ -950,7 +950,7 @@ class UI {//es la clase que interactua con el navegador
         showCancelButton: true,
         inputValidator: (value) => {
           if (!value) {
-            return 'Se debe agregar un nombre válido!'
+            return 'Se debe agregar un nombre válido.'
           }
         }
       })
@@ -959,15 +959,15 @@ class UI {//es la clase que interactua con el navegador
         const response = await countriesService.putData(countryId,{name:newName} );
         if (response.success) {
           Swal.fire(
-            'Editado!',
-            'Region ha sido editado!',
+            'Editado',
+            'Region ha sido editado.',
             'success'
           )
           this.renderTreeviewRegions();
         }else{
           console.log(response);
           Swal.fire(
-            'Error!',
+            'Error',
             response.error.join('\n'),
             'error'
           )
@@ -975,7 +975,7 @@ class UI {//es la clase que interactua con el navegador
       }
     }else{
       Swal.fire(
-        'Error!',
+        'Error',
         countryData.message.message,
         'error'
       )
@@ -994,7 +994,7 @@ class UI {//es la clase que interactua con el navegador
         showCancelButton: true,
         inputValidator: (value) => {
           if (!value) {
-            return 'Se debe agregar un nombre válido!'
+            return 'Se debe agregar un nombre válido.'
           }
         }
       })
@@ -1003,15 +1003,15 @@ class UI {//es la clase que interactua con el navegador
         const response = await citiesService.putData(cityId,{name:newName} );
         if (response.success) {
           Swal.fire(
-            'Editado!',
-            'Region ha sido editado!',
+            'Editado',
+            'Region ha sido editado.',
             'success'
           )
           this.renderTreeviewRegions();
         }else{
           // console.log(response.error);
           Swal.fire(
-            'Error!',
+            'Error',
             response.error.join('\n'),
             'error'
           )
@@ -1019,7 +1019,7 @@ class UI {//es la clase que interactua con el navegador
       }
     }else{
       Swal.fire(
-        'Error!',
+        'Error',
         cityData.message.message,
         'error'
       )
