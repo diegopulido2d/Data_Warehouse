@@ -56,7 +56,7 @@ const handlerEventDelUser = (owner)=> {
     // console.log(_id);
     Swal.fire({
         title: 'Está seguro?',
-        text: "La operacion de eliminacion no se puede revertir!",
+        text: "Esta operación no se puede revertir. &nbsp; ¿Desea continuar?",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
@@ -70,8 +70,8 @@ const handlerEventDelUser = (owner)=> {
             //    console.log(result)
             if (result) {
               Swal.fire(
-                'Eliminado!',
-                'El Usuario ha sido eliminado.',
+                'Eliminado.',
+                'El usuario ha sido eliminado.',
                 'success'
               )
 
@@ -173,12 +173,12 @@ const handlerEventDelCompany = (owner)=> {
 
   Swal.fire({
     title: 'Está seguro?',
-    text: "La operacion de eliminacion no se puede revertir",
+    text: "Esta operación no se puede revertir. ¿Desea continuar?",
     icon: 'warning',
     showCancelButton: true,
     confirmButtonColor: '#3085d6',
     cancelButtonColor: '#d33',
-    confirmButtonText: 'Si, borrarla!'
+    confirmButtonText: 'Continuar'
   }).then((result) => {
     if (result.isConfirmed) {
       const deleteCompany = ui.deleteCompany(_id);
@@ -188,13 +188,13 @@ const handlerEventDelCompany = (owner)=> {
         // console.log(result)
         if (result) {
           Swal.fire(
-            'Eliminada!',
+            'Registro eliminado.',
             'La compañia ha sido eliminada.',
             'success'
           )
         }else{
           Swal.fire(
-              'Error!',
+              'Error.',
               'La compañia no se puede eliminar.',
               'error'
           )
@@ -228,13 +228,13 @@ const handlerEventDeleteRegion = (obj)=> {
 
   // console.log('delete',obj);
   Swal.fire({
-  title: 'Está seguro?',
-  text: "La operacion de eliminacion no se puede revertir",
+  title: '¿Está seguro?',
+  text: "Esta operación no se puede revertir. &nbsp; ¿Desea continuar?",
   icon: 'warning',
   showCancelButton: true,
   confirmButtonColor: '#3085d6',
   cancelButtonColor: '#d33',
-  confirmButtonText: 'Si, borrarla!!'
+  confirmButtonText: 'Continuar'
   }).then((result) => {
     if (result.isConfirmed) {
       switch (obj.Type){
@@ -276,13 +276,13 @@ window.onload = () => {
         $table_contacts.bootstrapTable('uncheck',  index);
           
           Swal.fire({
-            title: 'Está seguro?',
-            html: "La operacion de eliminacion no se puede revertir. &nbsp; Solo aplica para la fila indicada",
+            title: '¿Está seguro?',
+            html: "Esta operación no se puede revertir. &nbsp; ¿Desea continuar?",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Si, borrar fila!'
+            confirmButtonText: 'Continuar'
           }).then((result) => {
             if (result.isConfirmed) {
               ui.deleteContact(row.id);
@@ -327,7 +327,7 @@ const handleFormSubmit = (e)=> {
         ui.userLogin(_data);
     }
     else {
-        ui.renderMessage("Usuario y Contraseña son requeridas", "danger", _longAlert);
+        ui.renderMessage("Datos requeridos", "danger", _longAlert);
     }
 }
 
@@ -694,11 +694,11 @@ contactosTab.addEventListener('click', (e) => {
 //contactos
 $newchannel_btn.addEventListener('click', function() {
   const canales =[
-      'Whatsapp',
+      'WhatsApp',
       'Facebook',
       'Instagram',
-      'Email',
-      'Telefono',
+      'E-mail',
+      'Teléfono',
       'Linkedin',
       'Twitter'
       ]

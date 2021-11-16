@@ -90,6 +90,8 @@
                 
                 <img class="dwLogo" src="/Front-End/images/dw_icon.png" alt="">
                 <h1 class="dwTitle">Data<br>Warehouse</h1>
+                <br>
+                <h6><i>Proyecto Final - DWFS</i></h6>
             </div>
             <div class="col-md-6 text-center justify-content-center position-relative">
                 <span class="decorator lg"></span>
@@ -128,11 +130,13 @@
                     </div>
                 </div>
 
-                <table id="table-contacts" data-toggle="table" data-toolbar="#toolbar" data-search="true" data-show-search-button="true"
-                    data-search-align="left" data-search-accent-neutralise="true" data-click-to-select="true"
-                    data-show-button-text="true" data-pagination="true" data-show-export="true" data-id-field="id"
-                    data-maintain-meta-data="true" data-row-style="rowStyle" data-toolbar-align="right">
-                </table>
+                <div class="table-contacts-container">
+                    <table id="table-contacts" data-toggle="table" data-toolbar="#toolbar" data-click-to-select="true"  data-search="true" data-show-search-button="true"
+                    data-search-align="left" 
+                        data-show-button-text="true" data-pagination="true" data-show-export="true" data-id-field="id"
+                        data-toolbar-align="right">
+                    </table>
+                </div>
 
                 <!-- modal contactos -->
                 <div class="modal fade" id="contactsModal" tabindex="-1"
@@ -416,7 +420,7 @@
                 </button>
                 </div>
                 <!-- Tabla de usuarios -->
-                <div class="table-user-container d-block p-2">
+                <div class="table-user-container">
                     <table id="table-user" data-toggle="table" data-click-to-select="true" data-toolbar="#toolbar_users" 
                     data-search="true" data-show-search-button="true" data-toolbar-align="right" data-pagination="true" 
                     data-search-align="left" data-id-field="id">
@@ -568,6 +572,10 @@
                 
             </section>
 
+        </div>
+
+        <div class="footer">
+            <a href="https://github.com/diegopulido2d/Data_Warehouse" target="_blank">&copy Copyright - 2021</a>
         </div>
 
     <script src="./scripts/artarax-treeview/jquery.artaraxtreeview.js"></script>

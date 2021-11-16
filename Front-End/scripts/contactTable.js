@@ -126,7 +126,6 @@ class ContactTable {
           }).then((result) => {
             if (result.isConfirmed) {
 
-                // console.log(result);
                 $table_contacts.bootstrapTable("remove", {
                     field: "id",
                     values: ids,
@@ -152,7 +151,7 @@ class ContactTable {
     contactFormatter(value, row, index) {
         return [
             '<div class="d-flex align-items-center">',
-            '<img class="rounded-circle" loading="lazy" src="https://placekitten.com/100/100" width="30">',
+            '<img class="rounded-circle" loading="lazy" src="./images/user.png  " width="30">',
             '<div class="ms-2">',
             '<div style="font-size:1rem" class="text-nowrap text-truncate">' + row.username + ' ' + row.lastname + '</div>',
             '<div style="font-size:0.9rem;color:#6c757d"> <span class="d-none">;</span>' + row.email + '</div>',
@@ -178,17 +177,14 @@ class ContactTable {
     }
 
     channelsFormatter(value, row, index) {
-        // console.log(value);
         let container = ['<div class="d-flex">'];
         let items = [];
         let canales = [];
         let items_container = ['<div class="ellipsis_container">','<div>...</div>','<div class="channel_container">'];
         let fenabled = false;
         let count = value.length;
-        // console.log(value);
         
         if (value.length > 1) {
-            // console.log(count);
     
             for (let i = 0; i < count; i++) {
                 if (i<2) { //normal container

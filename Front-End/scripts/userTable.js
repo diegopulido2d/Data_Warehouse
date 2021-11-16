@@ -52,7 +52,7 @@ class UserTable {
             return [
                 '<div class="ellipsis_actions">...</div><div class="overlay_actions"><a id="editUserBtn" "Onclick=console.log(this);return false;" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#userModal" data-_id="'+ row.id +'" data-bs-whatever="'+ ParamsEdit + '">',
                 '<i class="fa fa-edit"></i>',
-                '</a> &nbsp; ',
+                '</a>',
                 '<a name="deleteUserBtn_'+ index +'" Onclick=deleteUser(this);return false;" class="btn btn-danger btn-sm" data-_id="'+ row.id +'" >',
                 '<i class="fa fa-trash"></i>',
                 '</a></div>'

@@ -1,5 +1,13 @@
 body {
   font-family: 'Open Sans' !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
 }
 
 .dwLogo {
@@ -9,6 +17,19 @@ body {
 
 .dwTitle {
   font-weight: 900;
+}
+
+.footer {
+  background-color: #1D72C2;
+  width: 100%;
+  margin: 0;
+  padding: 35px;
+  text-align: right;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
 }
 
 .navbar {
@@ -51,6 +72,7 @@ body {
 
 .login-container {
   padding-top: 13%;
+  padding-bottom: 10%;
 }
 
 .login-form {
@@ -79,6 +101,7 @@ body {
 
 .tab-content {
   padding: 100px 50px 0 50px;
+  min-height: 90vh;
 }
 
 .tab-content .secTitle {
@@ -97,6 +120,16 @@ body {
 
 .tab-content .search button {
   height: 100%;
+}
+
+.tab-content .channels-table {
+  background-color: #c4e0fa;
+  padding: 3px 10px;
+  margin: 3px;
+  font-size: 10px;
+  font-weight: 500;
+  color: #0683F9;
+  border-radius: 0 !important;
 }
 
 .tab-content tr {
@@ -138,12 +171,62 @@ tr:hover td {
   margin: 5px;
 }
 
-.table-company-container .fixed-table-toolbar {
+.table-company-container .fixed-table-toolbar, .table-user-container .fixed-table-toolbar {
   padding-bottom: 45px;
+}
+
+.acciones-table .ellipsis_actions {
+  display: none;
 }
 
 .fixed-table-pagination {
   padding-top: 40px;
   padding-bottom: 40px;
+}
+
+.treeview {
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.treeview label {
+  font-family: 'Open Sans' !important;
+}
+
+.treeview label input {
+  display: none;
+}
+
+.ellipsis_tree {
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+}
+
+.btn-wrpr {
+  left: 0 !important;
+}
+
+.node-minus {
+  display: none;
+}
+
+.treeview > li > label {
+  text-transform: uppercase;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.treeview > li > ul > li > ul {
+  padding-left: 20px;
+}
+
+.treeview > li > ul > li > ul > li {
+  font-style: italic;
 }
 /*# sourceMappingURL=style.css.map */

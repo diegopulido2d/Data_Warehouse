@@ -178,11 +178,6 @@ class UI {//es la clase que interactua con el navegador
     $loginContainer.classList.remove('d-none');
     $nav_pills.style.display = 'none';
     $appContainer.classList.add('d-none');
-    Swal.fire(
-      'Adios!',
-      'Regresa pronto',
-      'success'
-    )
   }
 
   

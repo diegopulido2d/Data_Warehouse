@@ -215,11 +215,11 @@
             }
 
             if (hasChildren) {
-                treeViewHtml += '<li><span class="' + nodeSignCssClass + '"></span><label class="' + selectedClass + '"><input type="checkbox" data-id="' + obj.Id + '" ' + checkedAttribute + ' class="chk" /> ' + obj.Title + '</label><div class="btn-wrpr" ><div class="ellipsis_tree" style="font-weight: bold;">...</div><div class="overlay_tree">' + updatableHtml + deletableHtml + '</div></div>';
+                treeViewHtml += '<li><span class="' + nodeSignCssClass + '"></span><label class="' + selectedClass + '"><input type="checkbox" data-id="' + obj.Id + '" ' + checkedAttribute + ' class="chk" /> ' + obj.Title + '</label><div class="btn-wrpr" ><img class="ellipsis_tree" src="./images/settings.png"><div class="overlay_tree">' + updatableHtml + deletableHtml + '</div></div>';
                 treeViewHtml += '<ul>';
             }
             else {
-                treeViewHtml += '<li><span class="node-none"></span><label class="' + selectedClass + '"><input type="checkbox" data-id="' + obj.Id + '" ' + checkedAttribute + ' class="chk leaf" /> ' + obj.Title + '</label><div class="btn-wrpr" ><div class="ellipsis_tree" style="font-weight: bold;">...</div><div class="overlay_tree">' + updatableHtml + deletableHtml + '</div></div></li>';
+                treeViewHtml += '<li><span class="node-none"></span><label class="' + selectedClass + '"><input type="checkbox" data-id="' + obj.Id + '" ' + checkedAttribute + ' class="chk leaf" /> ' + obj.Title + '</label><div class="btn-wrpr" ><img class="ellipsis_tree" src="./images/settings.png"><div class="overlay_tree">' + updatableHtml + deletableHtml + '</div></div></li>';
             }
         }
 
