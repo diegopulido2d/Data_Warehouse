@@ -55,13 +55,13 @@ const handlerEventDelUser = (owner)=> {
     const _id = owner.getAttribute('data-_id');
     // console.log(_id);
     Swal.fire({
-        title: 'Está seguro?',
-        text: "Esta operación no se puede revertir. &nbsp; ¿Desea continuar?",
+        title: 'Advertencia',
+        text: "Esta operación no se puede revertir. ¿Desea continuar?",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Si, borrarla!'
+        confirmButtonText: 'Continuar'
       }).then((result) => {
         if (result.isConfirmed) {
            const deleteUser = ui.deleteUser(_id);
@@ -70,7 +70,7 @@ const handlerEventDelUser = (owner)=> {
             //    console.log(result)
             if (result) {
               Swal.fire(
-                'Eliminado.',
+                'Eliminado',
                 'El usuario ha sido eliminado.',
                 'success'
               )
@@ -79,7 +79,7 @@ const handlerEventDelUser = (owner)=> {
 
             }else{
               Swal.fire(
-                  'Error!',
+                  'Error',
                   'El usuario no se puede eliminar.',
                   'error'
               )
@@ -138,7 +138,7 @@ const handlerEventUpdateContact = (e)=> {
   });
   if(botones_activos>0){
     console.log('botones activos')
-    Swal.fire('Conflicto!','No se puede editar un contacto mientras se esta editando uno de sus canales','warning');
+    Swal.fire('Conflicto','No se puede editar un contacto mientras se esta editando uno de sus canales','warning');
     return false;
   }else{
     ui.editContact(contactId);
@@ -172,7 +172,7 @@ const handlerEventDelCompany = (owner)=> {
 
 
   Swal.fire({
-    title: 'Está seguro?',
+    title: 'Advertencia',
     text: "Esta operación no se puede revertir. ¿Desea continuar?",
     icon: 'warning',
     showCancelButton: true,
@@ -188,13 +188,13 @@ const handlerEventDelCompany = (owner)=> {
         // console.log(result)
         if (result) {
           Swal.fire(
-            'Registro eliminado.',
+            'Eliminado',
             'La compañia ha sido eliminada.',
             'success'
           )
         }else{
           Swal.fire(
-              'Error.',
+              'Error',
               'La compañia no se puede eliminar.',
               'error'
           )
@@ -228,8 +228,8 @@ const handlerEventDeleteRegion = (obj)=> {
 
   // console.log('delete',obj);
   Swal.fire({
-  title: '¿Está seguro?',
-  text: "Esta operación no se puede revertir. &nbsp; ¿Desea continuar?",
+  title: 'Advertencia',
+  text: "Esta operación no se puede revertir. ¿Desea continuar?",
   icon: 'warning',
   showCancelButton: true,
   confirmButtonColor: '#3085d6',
@@ -276,8 +276,8 @@ window.onload = () => {
         $table_contacts.bootstrapTable('uncheck',  index);
           
           Swal.fire({
-            title: '¿Está seguro?',
-            html: "Esta operación no se puede revertir. &nbsp; ¿Desea continuar?",
+            title: 'Advertencia',
+            html: "Esta operación no se puede revertir. ¿Desea continuar?",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
@@ -327,7 +327,7 @@ const handleFormSubmit = (e)=> {
         ui.userLogin(_data);
     }
     else {
-        ui.renderMessage("Datos requeridos", "danger", _longAlert);
+        ui.renderMessage("Datos requeridos.", "danger", _longAlert);
     }
 }
 
@@ -375,7 +375,7 @@ $userModal.addEventListener('show.bs.modal', function (event) {
   if (_function =='create'){
       document.querySelector("#User_Form").reset();
       ui.renderCreationUserModal();
-      modalTitle.textContent = 'Nuevo Usuario '
+      modalTitle.textContent = 'Nuevo Usuario: '
       document.querySelector("#btn_addUser > span").innerText= 'Crear';
 
       btn_addUser.removeEventListener('click', handlerEventUpdateUser);
@@ -400,7 +400,7 @@ $btn_addRegion.addEventListener('click', (e) => {
   e.stopPropagation();
 
   Swal.fire({
-    title: 'Agregar Nueva Region',
+    title: 'Agregar',
     input: 'text',
     // inputLabel: 'Nueva Region',
     inputPlaceholder: 'nombre',
@@ -434,7 +434,7 @@ $btn_addCountry.addEventListener('click', (e) => {
     regiones.forEach((element) => {inputOptions.set(element.id, element.name);})
     // console.log(inputOptions);
     Swal.fire({
-      title: 'Seleccione una Region',
+      title: 'Seleccione una región:',
       input: 'select',
       inputOptions: inputOptions,
       inputPlaceholder: 'Region',
@@ -444,7 +444,7 @@ $btn_addCountry.addEventListener('click', (e) => {
           if (!value == '') {
             resolve()
           } else {
-            resolve('Tienes que seleccionar una region :)')
+            resolve('Debe seleccionar una region.')
           }
         })
       }
@@ -454,7 +454,7 @@ $btn_addCountry.addEventListener('click', (e) => {
         const regionId = result.value;
         // console.log(regionId)
         Swal.fire({
-          title: 'Agregar Nuevo Pais',
+          title: 'Agregar nuevo pais:',
           input: 'text',
           inputPlaceholder: 'nombre',
           showCancelButton: true,
@@ -463,7 +463,7 @@ $btn_addCountry.addEventListener('click', (e) => {
               if (!value == '') {
                 resolve()
               } else {
-                resolve('Nombre de pais no valido')
+                resolve('Nombre de pais no válido.')
               }
             })
           }
@@ -490,17 +490,17 @@ $btn_addCity.addEventListener('click', (e) => {
     const inputOptions = new Map();
     regiones.forEach((element) => {inputOptions.set(element.id, element.name);})
     Swal.fire({
-      title: 'Seleccione una Region',
+      title: 'Seleccione una región:',
       input: 'select',
       inputOptions: inputOptions,
-      inputPlaceholder: 'Region',
+      inputPlaceholder: 'Región',
       showCancelButton: true,
       inputValidator: (value) => {
         return new Promise((resolve) => {
           if (!value == '') {
             resolve()
           } else {
-            resolve('Tienes que seleccionar una region :)')
+            resolve('Debe seleccionar una region.')
           }
         })
       }
@@ -513,8 +513,8 @@ $btn_addCity.addEventListener('click', (e) => {
           // console.log(paises)
           if (!paises) {
             Swal.fire(
-              'Error!',
-              'Agregue primero un Pais',
+              'Error',
+              'Agregue primero un pais.',
               'error'
             )
             return;
@@ -523,17 +523,17 @@ $btn_addCity.addEventListener('click', (e) => {
           paises.forEach((element) => {inputOptions.set(element.id, element.name);})
           // console.log(inputOptions)
           Swal.fire({
-            title: 'Seleccione un Pais',
+            title: 'Seleccione un pais:',
             input: 'select',
             inputOptions: inputOptions,
-            inputPlaceholder: 'Pais',
+            inputPlaceholder: 'País',
             showCancelButton: true,
             inputValidator: (value) => {
               return new Promise((resolve) => {
                 if (!value == '') {
                   resolve()
                 } else {
-                  resolve('Tienes que seleccionar un pais :)')
+                  resolve('Debe seleccionar un pais.')
                 }
               })
             }
@@ -542,16 +542,16 @@ $btn_addCity.addEventListener('click', (e) => {
             if (result.isConfirmed) {
               const countryId = result.value;
               Swal.fire({
-                title: 'Agregar Nueva Ciudad',
+                title: 'Agregar nueva ciudad:',
                 input: 'text',
-                inputPlaceholder: 'nombre',
+                inputPlaceholder: 'Ciudad',
                 showCancelButton: true,
                 inputValidator: (value) => {
                   return new Promise((resolve) => {
                     if (!value == '') {
                       resolve()
                     } else {
-                      resolve('Nombre de ciudad no valido')
+                      resolve('Nombre de ciudad no válido.')
                     }
                   })
                 }
@@ -613,7 +613,7 @@ $companyModal.addEventListener('show.bs.modal', function (event) {
   if (_function =='create'){
     document.querySelector("#Company_Form").reset();
     ui.renderCreateCompanyModal();
-    modalTitle.textContent = 'Nueva Compañia'    
+    modalTitle.textContent = 'Nueva Compañia: '    
     document.querySelector("#btn_addCompany > span").innerText= 'Crear';
 
     btn_addCompany.removeEventListener('click', handlerEventUpdateCompany);
@@ -805,7 +805,7 @@ $contactModal.addEventListener('show.bs.modal', function (event) {
     // document.querySelector("#contacto_form").reset();
     functions.resetContactForm();
     ui.renderCreateContactModal();
-    modalTitle.textContent = 'Nuevo Contacto'    
+    modalTitle.textContent = 'Nuevo Contacto: '    
     document.querySelector("#btn_addContacto > span").innerText= 'Crear';
 
     btn_addContacto.removeEventListener('click', handlerEventUpdateContact);

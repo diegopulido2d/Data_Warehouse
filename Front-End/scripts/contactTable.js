@@ -116,13 +116,13 @@ class ContactTable {
         var ids = getIdSelections();
 
         Swal.fire({
-            title: 'Está seguro?',
-            text: "La operacion de eliminacion no se puede revertir",
+            title: 'Advertencia',
+            text: "Esta operación no se puede revertir. ¿Desea continuar?",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Si, borrar seleccion!'
+            confirmButtonText: 'Continuar'
           }).then((result) => {
             if (result.isConfirmed) {
 
