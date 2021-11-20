@@ -34,14 +34,14 @@ class ContactTable {
             width: 300,
             formatter: this.contactFormatter,
         }, {
-            title: 'Pais<span class="d-none">;</span>/Region',
+            title: 'País<span class="d-none">;</span>/Región',
             field: "cities.countries.name",
             sortable: true,
             valign: 'middle',
             width: 120,
             formatter: this.countryFormatter,
         }, {
-            title: "Compañia",
+            title: "Compañía",
             field: "companies.name",
             sortable: true,
             valign: 'middle',
@@ -63,7 +63,7 @@ class ContactTable {
             formatter: this.channelsFormatter,
         },
         {
-            title: "Interes",
+            title: "Interés",
             field: "interest",
             valign: 'middle',
             sortable: true,

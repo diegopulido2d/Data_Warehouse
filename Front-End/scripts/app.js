@@ -400,7 +400,7 @@ $btn_addRegion.addEventListener('click', (e) => {
   e.stopPropagation();
 
   Swal.fire({
-    title: 'Agregar',
+    title: 'Agregar:',
     input: 'text',
     // inputLabel: 'Nueva Region',
     inputPlaceholder: 'nombre',

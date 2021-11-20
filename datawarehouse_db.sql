@@ -2,8 +2,8 @@
 -- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8889
--- Generation Time: Oct 28, 2021 at 12:24 AM
+-- Host: localhost:3306
+-- Generation Time: Nov 02, 2021 at 05:03 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.16
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `mydb`
+-- Database: `datawarehouse_db`
 --
 
 -- --------------------------------------------------------
@@ -40,10 +40,9 @@ INSERT INTO `channels` (`id`, `name`) VALUES
 (1, 'Whatsapp'),
 (2, 'Facebook'),
 (3, 'Instagram'),
-(4, 'Email'),
-(5, 'Telefono'),
-(6, 'Linkedin'),
-(7, 'Twitter');
+(4, 'E-mail'),
+(5, 'Télefono'),
+(6, 'Linkedin');
 
 -- --------------------------------------------------------
 
@@ -64,18 +63,17 @@ CREATE TABLE `cities` (
 
 INSERT INTO `cities` (`id`, `name`, `countries_id`, `isactive`) VALUES
 (1, 'Buenos Aires', 1, b'1'),
-(2, 'Cordoba', 1, b'1'),
+(2, 'Córdoba', 1, b'1'),
 (3, 'Rio de Janeiro', 2, b'1'),
 (4, 'Sao Paulo', 2, b'1'),
-(5, 'Santiago', 3, b'1'),
+(5, 'Lima', 3, b'1'),
 (6, 'Bogotá', 4, b'1'),
 (7, 'Medellín', 4, b'1'),
-(8, 'San Francisco', 5, b'1'),
+(8, 'New York', 5, b'1'),
 (9, 'Los Angeles', 5, b'1'),
 (10, 'Toronto', 6, b'1'),
-(11, 'Montreal', 6, b'1'),
-(12, 'Mexico City', 7, b'1'),
-(13, 'Guadalajara', 7, b'1');
+(11, 'CDMX', 7, b'1'),
+(12, 'Guadalajara', 7, b'1');
 
 -- --------------------------------------------------------
 
@@ -98,19 +96,13 @@ CREATE TABLE `companies` (
 --
 
 INSERT INTO `companies` (`id`, `name`, `address`, `email`, `phone`, `cities_id`, `isactive`) VALUES
-(1, 'inversiones albaida s.a.', 'CALLE 60 A SUR CARRERA 105', 'inver@mail.com', '800016314', 1, b'1'),
-(2, 'corporacion de inversiones y construcciones ltda.', 'CALLE 36 N.17-56 LOCAL 3-2', 'corpo@mail.com', '890204041', 2, b'1'),
-(3, 'master electrico del valle ltda.', 'CARRERA 6 # 18 - 18', 'maste@mail.com', '890315291', 3, b'1'),
-(4, 'begole s.a.', 'CALLE 22 127 51 IN 4 BG 2 PS 2', 'begol@mail.com', '800211020', 4, b'1'),
-(5, 'sinco ltda s.c.a.', 'CRA 5 NO. 30-51', 'sinco@mail.com', '800043098', 5, b'1'),
-(6, 'alvaro velez y cia ltda.', 'CALLE 90 #13-63', 'alvar@mail.com', '860510431', 6, b'1'),
-(7, 'dow corning de colombia s.a.', 'TRANSVERSAL 18 NUMERO 78 80', 'dow c@mail.com', '800058886', 7, b'1'),
-(8, 'rudesco s.a.', 'CALLE 98 NO. 22 64 PISO 11', 'rudes@mail.com', '860535281', 8, b'1'),
-(9, 'digali s.a.', 'CARRERA 8A NO.99-51 OF.405', 'digal@mail.com', '860090230', 9, b'1'),
-(10, 'cultivos buenavista ltda sociedad comercializadora internacional', 'CALLE 86 # 11 16', 'culti@mail.com', '860516930', 10, b'1'),
-(11, 'flores san juan s.a. c.i.', 'CALLE 87 NO. 20-27 OFICINA 202', 'flore@mail.com', '800154771', 11, b'1'),
-(12, 'grupo empresarial de inversiones y cia ltda', 'CL. 94 NO. 21-59', 'grupo@mail.com', '830015816', 12, b'1'),
-(13, 'sumazari s.a', 'PIE DEL CERRO CALLE 30 NO. 17-206', 'sumaz@mail.com', '806001219', 13, b'1');
+(2, 'Compañía 1', 'Calle 112 # 34 - 56', 'c1@gmail.com', '12345678', 1, b'1'),
+(3, 'Compañía 2', 'Calle 113 # 34 - 56', 'c2@gmail.com', '22345678', 2, b'1'),
+(4, 'Compañía 3', 'Calle 114 # 34 - 56', 'c3@gmail.com', '32345678', 3, b'1'),
+(5, 'Compañía 4', 'Calle 115 # 34 - 56', 'c4@gmail.com', '42345678', 4, b'1'),
+(6, 'Compañía 5', 'Calle 116 # 34 - 56', 'c5@gmail.com', '52345678', 5, b'1'),
+(7, 'Compañía 6', 'Calle 117 # 34 - 56', 'c6@gmail.com', '62345678', 6, b'1'),
+(8, 'Compañía 7', 'Calle 118 # 34 - 56', 'c7@gmail.com', '72345678', 7, b'1');
 
 -- --------------------------------------------------------
 
@@ -139,19 +131,13 @@ CREATE TABLE `contacts` (
 --
 
 INSERT INTO `contacts` (`id`, `username`, `lastname`, `email`, `job_tittle`, `create_time`, `address`, `interest`, `imgUrl`, `users_id`, `companies_id`, `cities_id`, `isactive`) VALUES
-(1, 'adriana', 'Cujar', 'acujar@mail.com', 'Profesional', '2021-08-29 02:58:04', NULL, 0, NULL, 3, 1, 1, b'1'),
-(2, 'amparo', 'Montoya', 'omontoya@mail.com', 'Dependiente/a', '2021-08-29 02:58:04', NULL, 100, NULL, 1, 2, 2, b'1'),
-(3, 'andrea', 'Pilar', 'apilar@mail.com', 'Oficial', '2021-08-29 02:58:04', NULL, 25, NULL, 3, 3, 3, b'1'),
-(4, 'erika', 'Vanegas', 'avanegas@mail.com', 'Enfermero/a', '2021-08-29 02:58:04', NULL, 25, NULL, 1, 4, 4, b'1'),
-(5, 'fanny', 'Paez', 'ypaez@mail.com', 'Contable', '2021-08-29 02:58:04', NULL, 75, NULL, 3, 5, 5, b'1'),
-(6, 'hermes', 'Garcia', 'sgarcia@mail.com', 'Estudiante', '2021-08-29 02:58:04', NULL, 75, NULL, 3, 6, 6, b'1'),
-(7, 'luisa', 'Sanchez', 'asanchez@mail.com', 'Dependiente/a', '2021-08-29 02:58:04', NULL, 25, NULL, 1, 7, 7, b'1'),
-(8, 'madian', 'Sastoque', 'nsastoque@mail.com', 'Camarero/a', '2021-08-29 02:58:04', NULL, 50, NULL, 1, 8, 8, b'1'),
-(9, 'monica', 'Navas', 'anavas@mail.com', 'Estudiante', '2021-08-29 02:58:04', NULL, 75, NULL, 1, 9, 9, b'1'),
-(10, 'nestor', 'Patino', 'rpatino@mail.com', 'Arquitecto/a', '2021-08-29 02:58:04', NULL, 0, NULL, 3, 10, 10, b'1'),
-(11, 'yulian', 'Ariza', 'nariza@mail.com', 'Recepcionista', '2021-08-29 02:58:04', NULL, 100, NULL, 1, 11, 11, b'1'),
-(12, 'adriana', 'Gomez', 'agomez@mail.com', 'Administrativo/a', '2021-08-29 02:58:04', NULL, 100, NULL, 1, 12, 12, b'1'),
-(13, 'alcira', 'Carvajal', 'acarvajal@mail.com', 'Contable', '2021-08-29 02:58:04', NULL, 50, NULL, 1, 13, 13, b'1');
+(1, 'Nestor', 'Arias', 'na@gmail.com', 'Asistente', '2021-09-21 02:58:04', '123456', 100, NULL, 2, 2, 1, b'1'),
+(2, 'Daniel', 'Ramírez', 'dr@gmail.com', 'Gerente', '2021-09-21 02:58:04', NULL, 25, NULL, 3, 3, 2, b'1'),
+(3, 'Martha', 'Guerrero', 'mg@gmail.com', 'Estudiante', '2021-09-20 16:16:32', '123456', 25, NULL, 2, 4, 3, b'1'),
+(4, 'Sebastian', 'Giraldo', 'sg@gmail.com', 'Mensajero', '2021-09-21 02:58:04', NULL, 75, NULL, 3, 5, 4, b'1'),
+(5, 'Joel', 'Goncalves', 'jc@gmail.com', 'Conductor', '2021-09-20 16:16:58', NULL, 75, NULL, 3, 6, 5, b'1'),
+(6, 'María', 'Dominguez', 'md@gmail.com', 'Abogada', '2021-09-21 02:58:04', NULL, 25, NULL, 1, 7, 6, b'1'),
+(7, 'Ana', 'Pulido', 'ap@gmail.com', 'Coach', '2021-09-21 02:58:04', NULL, 50, NULL, 1, 8, 7, b'1');
 
 -- --------------------------------------------------------
 
@@ -172,12 +158,9 @@ CREATE TABLE `contacts_channels` (
 --
 
 INSERT INTO `contacts_channels` (`id`, `acount`, `channels_id`, `preferences_id`, `contacts_id`) VALUES
-(1, 'My Whatsapp', 1, 1, 1),
-(2, 'My Facebook', 2, 2, 1),
-(3, 'My instagram', 3, 3, 1),
-(4, 'acujar@mail.com', 4, 2, 1),
-(5, 'amontoya', 4, 2, 2),
-(6, '312526565', 5, 2, 3);
+(24, 'nestorarias', 3, 2, 1),
+(25, '123456', 5, 2, 3),
+(26, 'mg@gmail.com', 4, 3, 3);
 
 -- --------------------------------------------------------
 
@@ -199,10 +182,10 @@ CREATE TABLE `countries` (
 INSERT INTO `countries` (`id`, `name`, `regions_id`, `isactive`) VALUES
 (1, 'Argentina', 1, b'1'),
 (2, 'Brasil', 1, b'1'),
-(3, 'Chile', 1, b'1'),
+(3, 'Perú', 1, b'1'),
 (4, 'Colombia', 1, b'1'),
-(5, 'Estados Unidos', 2, b'1'),
-(6, 'Canada', 2, b'1'),
+(5, 'EE.UU', 2, b'1'),
+(6, 'Canadá', 2, b'1'),
 (7, 'Mexico', 2, b'1');
 
 -- --------------------------------------------------------
@@ -221,8 +204,8 @@ CREATE TABLE `preferences` (
 --
 
 INSERT INTO `preferences` (`id`, `name`) VALUES
-(1, 'Sin Preferencia'),
-(2, 'Canal Favorito'),
+(1, 'N/A'),
+(2, 'Favorito'),
 (3, 'No molestar');
 
 -- --------------------------------------------------------
@@ -242,7 +225,7 @@ CREATE TABLE `regions` (
 --
 
 INSERT INTO `regions` (`id`, `name`, `isactive`) VALUES
-(1, 'Sudamérica', b'1'),
+(1, 'Latinoamérica', b'1'),
 (2, 'Norteamérica', b'1');
 
 -- --------------------------------------------------------
@@ -267,8 +250,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `lastname`, `email`, `password`, `create_time`, `isadmin`, `isactive`) VALUES
-(1, 'usuario', 'usuario', 'usuario@mail.com', 'usuario', '2021-08-29 07:27:00', b'0', b'1'),
-(2, 'administrador', 'administrador', 'administrador@mail.com', 'administrador', '2021-08-29 07:27:00', b'1', b'1'),
+(1, 'user', 'user', 'user@gmail.com', 'user', '2021-08-29 07:27:00', b'0', b'1'),
+(2, 'admin', 'admin', 'admin@gmail.com', 'admin', '2021-08-29 07:27:00', b'1', b'1'),
 (3, 'Diego', 'Pulido', 'dpulido@gmail.com', 'admin', '2021-08-29 07:27:00', b'1', b'1');
 
 --
@@ -366,13 +349,13 @@ ALTER TABLE `companies`
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `contacts_channels`
 --
 ALTER TABLE `contacts_channels`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `countries`
@@ -390,7 +373,7 @@ ALTER TABLE `preferences`
 -- AUTO_INCREMENT for table `regions`
 --
 ALTER TABLE `regions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`

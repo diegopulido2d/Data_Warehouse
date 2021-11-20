@@ -21,7 +21,7 @@
 3. Locate your localhost port settings.
 4. Make sure your localhost port number is the same as the number after the 'PORT' variable in the .env file.
 5. Run your localhost, and open your SQL graphic interface (phpMyAdmin, MariaDB, Heidi, or similar).
-6. Import the database .sql file named "Database_SQL.sql", located into the main folder. You can also run the query through your command line to create all the tables of the project.
+6. Import the database .sql file named "datawarehouse_db.sql", located into the main folder. You can also run the query through your command line to create all the tables of the project.
 7. Make sure to set all the environment variables according to your localhost settings (username, password and database name). You can do this in the .env file.
 
 *Note: The original project was developed using MAMP as the preferred local server environment. Since MAMP uses 'root' both as database username AND password, you will find both arguments in the .env variable. Feel free to adjust these settings according to your own local server workspace, as the username, password and port settings may vary.*
@@ -51,11 +51,10 @@ Server listening on PORT: 3000
 ## Log-In Credentials
 ### Admin
 
-- username : administrador
-- password : administrador
-
+- username : admin
+- password : admin
 
 ### User
-- username : usuario
-- password : usuario
+- username : user
+- password : user
 
